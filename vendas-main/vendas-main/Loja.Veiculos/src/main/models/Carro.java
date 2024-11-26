@@ -1,3 +1,4 @@
+
 package models;
 
 public class Carro extends Veiculo {
@@ -13,25 +14,25 @@ public class Carro extends Veiculo {
     }
 
     public int getQuantidadePortas() {
-        return quantidadePortas;
+        return this.quantidadePortas;
     }
 
-    public void setQuantidadePortas(int QuantidadePortas) {
-        this.quantidadePortas = QuantidadePortas;
+    public void setQuantidadePortas(int quantidadePortas) {
+        this.quantidadePortas = quantidadePortas;
     }
 
     public String getTipoCombustivel() {
-        return tipoCombustivel;
+        return this.tipoCombustivel;
     }
 
-    public void setTipoCombustivel(String TipoCombustivel) {
-        this.tipoCombustivel = TipoCombustivel;
+    public void setTipoCombustivel(String tipoCombustivel) {
+        this.tipoCombustivel = tipoCombustivel;
     }
     public String getTipoCarro() {
-        return tipoCarro;
+        return this.tipoCarro;
     }
-    public void setTipoCarro(String TipoCarro) {
-        this.tipoCarro = TipoCarro;
+    public void setTipoCarro(String tipoCarro) {
+        this.tipoCarro = tipoCarro;
     }
 
 }

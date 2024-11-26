@@ -12,26 +12,26 @@ public class Moto extends Veiculo {
         this.Categoria = Categoria;
     }
     public String getCor() {
-        return Cor;
+        return this.Cor;
     }
-    public void setCor(String cor) {
-        this.Cor = cor;
+    public void setCor(String Cor) {
+        this.Cor = Cor;
     }
   
     public int getNumMotor() {
-        return NumMotor;
+        return this.NumMotor;
     }
 
-    public void setNumMotor(int numMotor) {
-        this.NumMotor = numMotor;
+    public void setNumMotor(int NumMotor) {
+        this.NumMotor = NumMotor;
     }
 
     public String getCategoria() {
-        return Categoria;
+        return this.Categoria;
     }
 
-    public void setCategoria(String categoria) {
-        this.Categoria = categoria;
+    public void setCategoria(String Categoria) {
+        this.Categoria = Categoria;
     }
 
 }

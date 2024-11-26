@@ -16,7 +16,7 @@ public abstract class Veiculo {
     }
 
     public String getMarca() {
-        return marca;
+        return this.marca;
     }
 
     public void setMarca(String marca) {
@@ -24,7 +24,7 @@ public abstract class Veiculo {
     }
 
     public String getModelo() {
-        return modelo;
+        return this.modelo;
     }
 
     public void setModelo(String modelo) {
@@ -32,7 +32,7 @@ public abstract class Veiculo {
     }
 
     public int getAno() {
-        return ano;
+        return this.ano;
     }
 
     public void setAno(int ano) {
@@ -44,11 +44,11 @@ public abstract class Veiculo {
     }
 
     public int getQtdPassageiros() {
-        return QtdPassageiros;
+        return this.QtdPassageiros;
     }
 
     public boolean getSeguro() {
-        return Seguro;
+        return this.Seguro;
     }
     public void setSeguro(boolean Seguro) {
         this.Seguro = Seguro;

@@ -26,14 +26,16 @@ public class App {
 
         System.out.println("Quantos carros quer cadastrar?");
         rodar = scanner.nextInt();
+        scanner.nextLine();
         ArrayList<Carro> carros = new ArrayList<>();
         // LOOP FOR QUE RODA QUANTAS VEZES O USUÁRIO QUISER
         for (int i = rodar ;i > 0;i-- ) {
-            System.out.println("Nome do carro: ");
-            marca = scanner.next();
+         
+            System.out.println("Marca do carro: ");
+            marca = scanner.nextLine();
 
             System.out.println("Modelo do carro: ");
-            modelo = scanner.next();
+            modelo = scanner.nextLine();
 
             System.out.println("Ano do carro: ");
             ano = scanner.nextInt();
@@ -48,10 +50,12 @@ public class App {
             qtdPassageiros = scanner.nextInt(); 
 
             System.out.println("Tem seguro? (true/false): ");
-            Seguro = scanner.nextBoolean(); 
+            Seguro = scanner.nextBoolean();
+            
+            scanner.nextLine();
 
             System.out.println("Tipo do carro: ");
-            tipoCarro = scanner.next();
+            tipoCarro = scanner.nextLine();
 
             carros.add(new Carro( marca, modelo, ano, qtdPortas, tipoCombustivel,qtdPassageiros,Seguro,tipoCarro));          
         }
@@ -74,14 +78,15 @@ public class App {
         System.out.println(" ");
         System.out.println("Quantas motos quer cadastrar? ");
         rodar = scanner.nextInt();
-
+        scanner.nextLine();
         ArrayList<Moto> motos = new ArrayList<>();
         for (int j = rodar; j > 0; j--){
-            System.out.println("Nome da moto: ");
-            marca = scanner.next();
+           
+            System.out.println("Marca da moto: ");
+            marca = scanner.nextLine();
 
             System.out.println("Modelo da moto: ");
-            modelo = scanner.next();
+            modelo = scanner.nextLine();
 
             System.out.println("Ano da moto: ");
             ano = scanner.nextInt();
@@ -90,16 +95,20 @@ public class App {
             qtdPassageiros = scanner.nextInt(); 
 
             System.out.println("Tem seguro? (true/false): ");
-            Seguro = scanner.nextBoolean(); 
+            Seguro = scanner.nextBoolean();
+            
+            scanner.nextLine();
 
             System.out.println("Cor da moto: ");
-            cor = scanner.next();
+            cor = scanner.nextLine();
 
             System.out.println("Número da moto: ");
             NumMoto = scanner.nextInt();
 
+            scanner.nextLine();
+
             System.out.println("Categoria da moto: ");
-            Categoria = scanner.next();
+            Categoria = scanner.nextLine();
 
             motos.add(new Moto(marca, modelo, ano, qtdPassageiros,Seguro, cor, NumMoto, Categoria));
         }

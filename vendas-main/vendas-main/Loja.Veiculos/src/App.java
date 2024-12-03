@@ -57,16 +57,26 @@ public class App {
             System.out.println("Tipo do carro: ");
             tipoCarro = scanner.nextLine();
 
-            carros.add(new Carro( marca, modelo, ano, qtdPortas, tipoCombustivel,qtdPassageiros,Seguro,tipoCarro));          
+            System.out.println("//////////////////");
+            System.out.println("       DONO       ");
+            System.out.println("//////////////////");
+
+            System.out.println("Nome do dono: ");
+            String nomeDono = scanner.nextLine();
+
+            System.out.println("Cpf do dono:");
+            String cpfDono = scanner.nextLine();
+
+            System.out.println("Telefone: ");
+            String telefoneDono = scanner.nextLine();
+
+            Dono dono = new Dono(nomeDono, cpfDono, telefoneDono);
+            carros.add(new Carro(marca, modelo, ano, qtdPortas, tipoCombustivel,qtdPassageiros,Seguro,tipoCarro, dono));          
         }
         // LAÇO FOR QUE IMPRIME AS INFORMAÇÕES DE TODOS OS CARROS CADASTRADOS
         for (Carro carro : carros) {
             System.out.println("=====================================================================");
-            System.out.printf
-            ("Marca: %s - Modelo: %s - Ano: %d - qtdPortas: %d - tipoCombustivel: %s - qtdPassageiros: %d - seguro: %b - tipoCarro: %s"
-            ,carro.getMarca(), carro.getModelo(), carro.getAno(), carro.getQuantidadePortas(),
-            carro.getTipoCombustivel(), carro.getQtdPassageiros(), carro.getSeguro(), carro.getTipoCarro()
-            );
+            System.out.println(carro.imprimir() + carro.imprimirCarro());
             System.out.println(" ");
         }
        
@@ -110,15 +120,28 @@ public class App {
             System.out.println("Categoria da moto: ");
             Categoria = scanner.nextLine();
 
-            motos.add(new Moto(marca, modelo, ano, qtdPassageiros,Seguro, cor, NumMoto, Categoria));
+            System.out.println("///////////////////////////");
+            System.out.println("       Serviço Pedido       ");
+            System.out.println("///////////////////////////");
+
+            System.out.println("Data do serviço: ");
+            String Dataservico = scanner.nextLine();
+            
+            System.out.println("Descrição do serviço: ");
+            String DescricaoDoservico = scanner.nextLine();
+            
+            System.out.println("Custo do serviço: ");
+            double CustoDoservico = scanner.nextDouble();
+            
+            scanner.nextLine();
+            
+            ServicoPedido servico = new ServicoPedido(Dataservico, DescricaoDoservico,CustoDoservico);
+            motos.add(new Moto(marca, modelo, ano, qtdPassageiros,Seguro, cor, NumMoto, Categoria, servico));
         }
         // LAÇO FOR QUE PERCORRE O ARRAY COM OS OBJETOS 
         for (Moto moto : motos) {
             System.out.println("=======================================");
-            System.out.printf("Marca: %s - Modelo: %s - Ano: %d - QtdPassgeiros: %d - Seguro: %b - Cor: %s - NumMoto: %d - Categoria: %s"
-            ,moto.getMarca(),moto.getModelo(),moto.getAno(),moto.getQtdPassageiros(),
-            moto.getSeguro(),moto.getCor(),moto.getNumMotor(),moto.getCategoria()
-            );
+            System.out.println(moto.imprimir() + moto.imprimirMoto());
             System.out.println(" ");
         }
        

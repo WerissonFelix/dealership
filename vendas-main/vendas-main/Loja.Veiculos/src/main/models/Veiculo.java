@@ -53,5 +53,14 @@ public abstract class Veiculo {
     public void setSeguro(boolean Seguro) {
         this.Seguro = Seguro;
     }
+    
+    // impressão de dados
+    
+    public String imprimir(){
+        return "Marca: " + marca + "\nModelo: " + modelo + "\nAno: " + ano 
+        + "\nPasssageiros: " + QtdPassageiros + "\nSeguro: " + Seguro;
+
+    }
+
 
 }
